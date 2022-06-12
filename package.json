@@ -19,5 +19,8 @@
   "homepage": "https://github.com/oybekabdulazizov/CLtoolWatch#readme",
   "bin": {
     "watch": "index.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3"
   }
 }
