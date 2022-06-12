@@ -1,8 +1,23 @@
 #!/usr/bin/env node
 
 const chokidar = require('chokidar');
+const debounce = require('lodash.debounce');
 
-chokidar.watch('.')
-    .on('add', () => console.log('started'))
-    .on('change', () => console.log('changed'))
-    .on('unlink', () => console.log('unlinked'));
+
+const add = debounce(() => {
+    console.log('new file added');
+}, 200);
+
+const change = debounce(() => {
+    console.log('file modified');
+});
+
+const unlink = debounce(() => {
+    console.log('file deleted');
+})
+
+chokidar
+    .watch('.')
+    .on('add', add)
+    .on('change', change)
+    .on('unlink', unlink);

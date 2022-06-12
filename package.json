@@ -21,6 +21,7 @@
     "watch": "index.js"
   },
   "dependencies": {
-    "chokidar": "^3.5.3"
+    "chokidar": "^3.5.3",
+    "lodash.debounce": "^4.0.8"
   }
 }
