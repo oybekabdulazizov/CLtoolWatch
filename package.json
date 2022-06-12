@@ -21,6 +21,7 @@
     "watch": "index.js"
   },
   "dependencies": {
+    "caporal": "^1.4.0",
     "chokidar": "^3.5.3",
     "lodash.debounce": "^4.0.8"
   }
